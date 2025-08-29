@@ -8,18 +8,21 @@
     <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 <body>
+    <!-- Desktop Navigation -->
     <nav id="desktop-nav">
         <div class="logo">Zhizheng Wang</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
-    
+
+    <!-- Hamburger Navigation -->
     <nav id="hamburger-nav">
         <div class="logo">Zhizheng Wang</div>
         <div class="hamburger-menu">
@@ -31,14 +34,18 @@
             <div class="menu-links">
                 <ul>
                     <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#education" onclick="toggleMenu()">Education</a></li>
                     <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                    <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
                     <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#interests" onclick="toggleMenu()">Interests</a></li>
                     <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
+
+    <!-- Profile Section -->
     <section id="profile">
         <div class="section__pic-container">
             <img src="./assets/profile-pic-zz.png" alt="Profile" />
@@ -52,229 +59,321 @@
                 Lifelong Learner
             </p>
             <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
-                    Download CV
-                </button>
-                <button class="btn btn-color-1" onclick="location.href ='./#contact'">
-                    Contact Info
-                </button>
+                <button class="btn btn-color-2" onclick="window.open('./assets/Resume.pdf')">Download CV</button>
+                <button class="btn btn-color-1" onclick="location.href ='#contact'">Contact Info</button>
             </div>
             <div id="socials-container">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/zhizheng-wang28/" target="_blank" rel="noopener noreferrer">
                     <img src="./assets/linkedin.png" alt="My Linkedin Profile" class="icon" />
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Zhizheng28" target="_blank" rel="noopener noreferrer">
                     <img src="./assets/github.png" alt="My Github Profile" class="icon" />
+                </a>
+                <a href="https://www.instagram.com/zhizheng_w28/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/instagram.png" alt="My Github Profile" class="icon" />
                 </a>
             </div>
         </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href ='#about'"/>
     </section>
 
+    <!-- About Section -->
     <section id="about">
         <p class="section__text__p1">Get To Know More</p>
         <h1 class="title">About Me</h1>
         <div class="section-container">
             <div class="section__pic-container">
-                <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic"/>
+                <img src="./assets/about-pic1.png" alt="Profile picture" class="about-pic"/>
             </div>
             <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/experience.png" alt="Experience icon" class="icon"/>
-                        <h3>Experience</h3>
-                        <p>4+ years <br /> Data Science</p>
-                    </div>
-                    <div class="details-container">
-                        <img src="./assets/education.png" alt="Education icon" class="icon"/>
-                        <h3>Education</h3>
-                        <p>M.S. Data Science @ UMich <br /> B.S. Data Science & Cogntive Science @ UGA</p>
-                    </div>
-                </div>
                 <div class="text-container">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Magni doloribus explicabo impedit voluptates, 
-                        nobis necessitatibus, doloremque, sunt dolore sint
-                        voluptatem adipisci autem facere laboriosam recusandae maxime? 
-                        Qui excepturi ratione tenetur!
+                        Zhizheng Wang is a student who enjoys solving complex problems and analyzing data to find meaningful insights. 
+                        He’s involved in research, likes teaching and helping others learn, 
+                        and is always looking for ways to improve himself while working on new challenges.
                     </p>
-                </div>    
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href ='#education'"/>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <p class="section__text__p1">Learn About My</p>
+        <h1 class="title">Education</h1>
+        <div class="education-container">
+            <div class="education-entry">
+                <div class="school-logo">
+                    <img src="./assets/umich-logo.png" alt="University of Michigan Logo" />
+                </div>
+                <div class="education-info">
+                    <div class="school-header">
+                        <h2>University of Michigan - Ann Arbor, MI</h2>
+                        <span class="education-date">August 2025 - July 2027 (Expected)</span>
+                    </div>
+                    <p class="degree">Master’s in Data Science</p>
+                    <p class="gpa">GPA: N/A</p>
+                    <ul class="key-courses">
+                        <li>Machine Learning</li>
+                        <li>Data Mining</li>
+                        <li>Big Data Analytics</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="education-entry">
+                <div class="school-logo">
+                    <img src="./assets/uga-logo.png" alt="University of Georgia Logo" />
+                </div>
+                <div class="education-info">
+                    <div class="school-header">
+                        <h2>University of Georgia - Athens, GA</h2>
+                        <span class="education-date">August 2021 - May 2025</span>
+                    </div>
+                    <p class="degree">Bachelor's in Data Science & Cognitive Science</p>
+                    <p class="gpa">Minor: Computer Science<br>GPA: 3.85/4.00</p>
+                    <ul class="key-courses">
+                        <li>Artificial Intelligence</li>
+                        <li>Statistical Learning</li>
+                        <li>Human-Computer Interaction</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href ='#experience'"/>
     </section>
 
-    <section id="experience">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">ML Skills</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>NLP</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>LLM</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>ML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>AI</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>RL</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Programming Language</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>Python</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>R</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>Java</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>SQL</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href ='#projects'"/>
-    </section>
-    
-    <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-1.png" alt="Project 1" class="project-img">
-                    </div>
-                    <h2 class="experience-sub-title project-title">Project One</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://www.github.com')">
-                            GitHub
-                        </button>
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://www.youtube.com')">
-                            Live Demo
-                        </button>
-                    </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-2.png" alt="Project 2" class="project-img">
-                    </div>
-                    <h2 class="experience-sub-title project-title">Project Two</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://www.github.com')">
-                            GitHub
-                        </button>
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://www.youtube.com')">
-                            Live Demo
-                        </button>
-                    </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-3.png" alt="Project 3" class="project-img">
-                    </div>
-                    <h2 class="experience-sub-title project-title">Project Three</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://www.github.com')">
-                            GitHub
-                        </button>
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://www.youtube.com')">
-                            Live Demo
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href ='#contact'"/>
-    </section>
+<!-- Experience Section -->
+<section id="experience">
+    <p class="section__text__p1">Journey Through My Experience</p>
+    <h1 class="title">Experience</h1>
 
+    <div class="experience-containers">
+
+        <!-- THINC -->
+        <div class="experience-card">
+            <img src="./assets/research.png" alt="Experience icon" class="icon"/>
+            <div class="experience-content">
+                <h3>Intelligent Thought and Action Lab (THINC)</h3>
+                <span>Undergraduate Researcher | February 2024 - September 2024 | Athens, GA</span>
+                <p>
+                    Curated and annotated a dataset of over 6000 images, ensuring quality data for AI model training.<br>
+                    Developed 5 Python scripts to automate camera settings, data extraction, and workflows.<br>
+                    Collaborated with a Ph.D. student to fine-tune the YOLO model for object detection with 99% accuracy.<br>
+                    Integrated YOLOv8 into PrecisionSort; ongoing updates for improved performance.
+                </p>
+            </div>
+        </div>
+
+        <!-- UGA OSSA -->
+        <div class="experience-card">
+            <img src="./assets/teach.png" alt="Experience icon" class="icon"/>
+            <div class="experience-content">
+                <h3>UGA Office for Student Success and Achievement</h3>
+                <span>Peer Tutor (Statistics/Computer Science/Mathematics) | January 2024 - May 2025 | Athens, GA</span>
+                <p>
+                    Provided constructive feedback and guided problem-solving in one-on-one and group Study Pod sessions.<br>
+                    Mentored over 50 students in academic strategies, enhancing critical thinking and analytical skills.
+                </p>
+            </div>
+        </div>
+
+        <!-- Data Science & AI Camp -->
+        <div class="experience-card">
+            <img src="./assets/datasci.png" alt="Experience icon" class="icon"/>
+            <div class="experience-content">
+                <h3>Data Science & Artificial Intelligence Camp</h3>
+                <span>Student Assistant | July 2025 | Athens, GA</span>
+                <p>
+                    Guided middle and high school students through AI and coding exercises, troubleshooting issues, and answering questions.<br>
+                    Assisted instructors in preparing lesson materials and managing classroom activities.<br>
+                    Mentored campers to foster interest in AI, programming, and problem-solving skills.<br>
+                    Maintained a safe and collaborative learning environment, ensuring smooth daily operations.
+                </p>
+            </div>
+        </div>
+
+        <!-- US Kids Golf -->
+        <div class="experience-card">
+            <img src="./assets/golf.png" alt="Experience icon" class="icon"/>
+            <div class="experience-content">
+                <h3>US Kids Golf</h3>
+                <span>Volunteer | June 2019 - July 2025 | Little Rock, AR</span>
+                <p>
+                    Streamlined tournament operations for 80+ players by managing registration and tracking scores.<br>
+                    Administered award distribution for all participants, ensuring result accuracy.<br>
+                    Coordinated daily logistics to support staff and enhance the experience for attendees.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" style="margin-top: 2rem; cursor: pointer;" onclick="location.href ='#skills'"/>
+
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Skills</h1>
+
+    <div class="skills-details-container">
+        <div class="skills-about-containers">
+
+            <!-- Programming Languages -->
+            <div class="skills-container">
+                <h2>Programming Languages</h2>
+                <div class="article-container">
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Python</h3><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>SQL</h3><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>R</h3><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Java</h3><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>HTML</h3><p>Experienced</p></div></article>
+                </div>
+            </div>
+
+            <!-- Data Science & Machine Learning -->
+            <div class="skills-container">
+                <h2>Data Science & Machine Learning</h2>
+                <div class="article-container">
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Regression</h3><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>NLP</h3><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Deep Learning</h3><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Data Mining</h3><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Feature Engineering</h3><p>Experienced</p></div></article>
+                </div>
+            </div>
+
+            <!-- Data Visualization & Analytics -->
+            <div class="skills-container">
+                <h2>Data Visualization & Analytics</h2>
+                <div class="article-container">
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Power BI</h3><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Excel</h3><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Matplotlib</h3><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Seaborn</h3><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Plotly</h3><p>Experienced</p></div></article>
+                </div>
+            </div>
+
+            <!-- Tools & Integration -->
+            <div class="skills-container">
+                <h2>Tools & Integration</h2>
+                <div class="article-container">
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Pandas</h3><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>NumPy</h3><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Scikit-learn</h3><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>TensorFlow</h3><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>PyTorch</h3><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Git</h3><p>Experienced</p></div></article>
+                    <article><img src="./assets/checkmark.png" class="icon" alt=""><div><h3>Linux</h3><p>Experienced</p></div></article>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href ='#projects'"/>
+</section>
+
+
+
+    <!-- Projects Section -->
+<section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+
+    <div class="project-details-container">
+        <div class="project-containers">
+
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="./assets/project-1.png" alt="Project 1" class="project-img">
+                <h2 class="project-title">Project One</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('https://www.github.com')">GitHub</button>
+                    <button class="btn btn-color-2" onclick="window.open('https://www.youtube.com')">Live Demo</button>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="./assets/project-2.png" alt="Project 2" class="project-img">
+                <h2 class="project-title">Project Two</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('https://www.github.com')">GitHub</button>
+                    <button class="btn btn-color-2" onclick="window.open('https://www.youtube.com')">Live Demo</button>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <img src="./assets/project-3.png" alt="Project 3" class="project-img">
+                <h2 class="project-title">Project Three</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('https://www.github.com')">GitHub</button>
+                    <button class="btn btn-color-2" onclick="window.open('https://www.youtube.com')">Live Demo</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href ='#interests'"/>
+</section>
+
+
+
+<!-- Interests Section -->
+<section id="interests">
+    <p class="section__text__p1">Dive Into My</p>
+    <h1 class="title">Interests</h1>
+
+    <div class="interests-container">
+        <img src="./assets/zz_interest1.png" alt="Interest 1" class="interest-img">
+        <img src="./assets/zz_interest2.png" alt="Interest 2" class="interest-img">
+        <img src="./assets/zz_interest3.png" alt="Interest 3" class="interest-img">
+        <img src="./assets/zz_interest4.png" alt="Interest 4" class="interest-img">
+        <img src="./assets/zz_interest5.png" alt="Interest 5" class="interest-img">
+        <img src="./assets/zz_interest6.png" alt="Interest 6" class="interest-img">
+        <img src="./assets/zz_interest7.png" alt="Interest 7" class="interest-img">
+        <img src="./assets/zz_interest8.png" alt="Interest 8" class="interest-img">
+    </div>
+
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href ='#contact'"/>
+</section>
+
+
+
+    <!-- Contact Section -->
     <section id="contact">
         <p class="section__text__p1">Get in Touch</p>
         <h1 class="title">Contact Me</h1>
         <div class="contact-info-upper-container">
             <div class="contact-info-container">
                 <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon"/>
-                <p>
-                    <a href="mailto:zhizhengwang28@gmail.com">zhizhengwang28@gmail.com</a>
-                </p>
+                <p><a href="mailto:zhizhengwang28@gmail.com">zhizhengwang28@gmail.com</a></p>
             </div>
             <div class="contact-info-container">
                 <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon"/>
-                <p>
-                    <a href="https://linkedin.com">LinkedIn</a>
-                </p>
+                <p><a href="https://linkedin.com">LinkedIn</a></p>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
         <p>Copyright &#169; 2025 Zhizheng Wang. All Rights Reserved.</p>
     </footer>
@@ -282,3 +381,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+

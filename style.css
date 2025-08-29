@@ -67,7 +67,6 @@ a:hover {
 }
 
 /* Hamburger Menu */
-
 #hamburger-nav {
     display: none;
 }
@@ -86,7 +85,7 @@ a:hover {
     cursor: pointer;
 }
 
-.hamburger-icon span{
+.hamburger-icon span {
     width: 100%;
     height: 2px;
     background-color: black;
@@ -97,7 +96,7 @@ a:hover {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: white;
+    background-color: rgba(245, 245, 245, 0.95); /* light gray, semi-transparent */
     width: fit-content;
     max-height: 0;
     overflow: hidden;
@@ -106,7 +105,7 @@ a:hover {
 
 .menu-links a {
     display: block;
-    padding: 10px;
+    padding: 10px 20px;
     text-align: center;
     font-size: 1.5rem;
     color: black;
@@ -114,12 +113,17 @@ a:hover {
     transition: all 0.3s ease-in-out;
 }
 
+.menu-links a:hover {
+    background-color: rgb(53, 53, 53);
+    color: white;
+}
+
 .menu-links li {
     list-style: none;
 }
 
 .menu-links.open {
-    max-height: 300px; 
+    max-height: 1000px; 
 }
 
 .hamburger-icon.open span:first-child {
@@ -146,6 +150,7 @@ a:hover {
     transform: none;
 }
 
+
 /* section */
 
 section {
@@ -171,8 +176,8 @@ section {
 
 .section__pic-container {
     display: flex;
-    height: 400px;
-    width: 400px;
+    height: auto;
+    width: auto;
     margin: auto 0;
     overflow: hidden;
     border-radius: 2rem;
@@ -181,7 +186,7 @@ section {
 
 .section__pic-container img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     object-position: center;
     border-radius: inherit;
@@ -286,31 +291,38 @@ section {
 }
 
 .about-containers {
+    display: flex;
     gap: 2rem;
+    align-items: center; /* vertically centers text with picture */
     margin-top: 2rem;
     margin-bottom: 2rem;
+    flex-wrap: wrap; /* responsive layout */
 }
 
 .about-details-container {
-    justify-content: center;
+    flex: 1;
+    display: flex;
     flex-direction: column;
+    justify-content: center; /* vertically centers text */
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
-}
-
-.about-containers,
-.about-details-container {
-    display: flex;
+    font-size: 1.25rem; /* bigger font for readability */
+    line-height: 1.6;
 }
 
 .about-pic {
-    width: 100%;
-    height: 100%;
+    width: 8rem; /* same as school logo */
+    height: 8rem; /* same as school logo */
     object-fit: cover;
     object-position: center;
     border-radius: 2rem;
     display: block;
+}
+
+.section-container {
+    gap: 4rem;
+    height: 80%;
 }
 
 .arrow {
@@ -319,99 +331,360 @@ section {
     bottom: 2.5rem;
 }
 
-.details-container {
-    padding: 1.5rem;
-    flex: 1;
-    background: white;
-    border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
-    text-align: center;
-    overflow: hidden;
-    word-wrap: break-word;
-}
-
-.details-container h3,
-.details-container p,
-.project-title {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-.section-container {
-    gap: 4rem;
-    height: 80%;
-}
-
-/* Experience Section */
-#experience {
+/* Education Section */
+#education {
     position: relative;
 }
 
-.experience-sub-title {
-    color: rgb(85, 85, 85);
-    font-weight: 600;
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
-}
-
-.experience-details-container {
+.education-container {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.article-container {
+.education-entry {
     display: flex;
-    text-align: initial;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 2.5rem;
-    justify-content: space-around;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap; /* allows stacking on smaller screens */
 }
 
-article {
-    display: flex;
-    width: 10rem;
-    justify-content: space-around;
-    gap: 0.5rem;
+.school-logo {
+    width: 8rem;
+    height: 8rem;
+    flex-shrink: 0;
+    overflow: hidden;
 }
 
-article .icon {
-    cursor: default;
-}
-
-/* Projects Section */
-
-#projects {
-    position: relative;
-}
-
-.color-container {
-    background-color: rgb(163, 163, 163);
-    background: rgb(250, 250, 250);
-}
-
-.project-img {
+.school-logo img[src*="umich-logo"] {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
-    object-position: center;
     border-radius: 2rem;
     display: block;
 }
 
+.school-logo img[src*="uga-logo"] {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0;
+    display: block;
+}
+
+.education-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.school-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap; /* allows date to move down on small screens */
+}
+
+.school-header h2 {
+    font-size: 1.25rem; /* smaller font */
+    margin: 0;
+    text-align: left;
+}
+
+.education-date {
+    font-size: 1rem; /* smaller font */
+    color: rgb(85, 85, 85);
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+.degree,
+.gpa {
+    font-size: 1rem; /* smaller font */
+    margin: 0.2rem 0;
+    text-align: left;
+}
+
+.gpa br { display: block; }
+
+.key-courses {
+    margin: 0.5rem 0 0 1.5rem;
+    padding: 0;
+    list-style-type: disc;
+    font-size: 0.9rem; /* smaller font */
+    color: rgb(60, 60, 60);
+    text-align: left;
+}
+
+/* Experience Section */
+#experience {
+  position: relative;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+/* Container for all experience entries */
+.experience-containers {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left; /* align content to left */
+  padding:2rem
+}
+
+
+/* Individual experience entry */
+.experience-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Experience icon on the left */
+.experience-card .icon {
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+/* Experience content on the right */
+.experience-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.experience-content span {
+  font-size: 0.9rem;
+  color: rgb(100, 100, 100);
+  margin: 0.2rem 0 0.5rem 0;
+}
+
+.experience-content p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+
+
+
+/* Skills Section */
+#skills {
+    position: relative;
+    padding: 2rem 0;
+}
+
+#skills .section__text__p1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+#skills .title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Skill Category Container */
+.skills-container {
+    border: 2px solid rgb(200, 200, 200); /* round border */
+    border-radius: 1.5rem;
+    padding: 1rem 1.5rem; /* consistent spacing */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Skill Category Titles */
+.skills-container h2 {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+
+/* Container for skill groups */
+.skills-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.skills-about-containers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* Container for individual skills inside each category */
+/* Skills inside category */
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start; /* left-aligned */
+    align-items: flex-start; /* align items to top so all lines start evenly */
+}
+
+/* Individual Skill Entry */
+article {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: auto; /* auto width for responsiveness */
+}
+
+article .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+}
+
+article div h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+article div p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: rgb(85, 85, 85);
+}
+
+
+
+/* Projects Section */
+#projects {
+    position: relative;
+    padding: 2rem 0;
+}
+
+/* Container for all project cards */
+.project-details-container {
+    display: flex;
+    justify-content: center;
+}
+
+.project-containers {
+    display: flex;
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual project card */
+.project-card {
+    flex: 1 1 30%; /* flexible width, 3 in a row */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    border: 0.1rem solid rgb(200, 200, 200);
+    padding: 1rem;
+    background: white; /* white background */
+    box-sizing: border-box;
+}
+
+/* Project image */
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1.5rem;
+}
+
+/* Project title */
 .project-title {
-    margin: 1rem;
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.25rem;
+    text-align: center;
     color: black;
 }
 
-.project-btn {
+/* Buttons container */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Buttons - matches Download CV button */
+.btn {
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+/* Download CV button style for project buttons */
+.btn-color-2 {
+    background: white; /* white background */
     color: black;
-    border-color: rgb(163, 163, 163);
+    border: 0.1rem solid rgb(53, 53, 53);
+}
+
+.btn-color-2:hover {
+    background: rgb(53, 53, 53); /* dark hover background */
+    color: white;
+    border: 0.1rem solid rgb(53, 53, 53);
+}
+
+
+
+#interests {
+    position: relative;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Section headings */
+#interests .section__text__p1,
+#interests .title {
+    margin-bottom: 0.5rem;
+}
+
+/* Container for all interest images */
+.interests-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto 0 auto;
+}
+
+/* Individual interest images */
+.interest-img {
+    width: 100%;
+    height: auto; /* preserve original 5:4 aspect ratio */
+    border-radius: 1rem; /* slightly rounded corners */
+    display: block;
 }
 
 /* Contact */
