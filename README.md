@@ -1,1 +1,1 @@
-WEBSITE: https://zhizheng28.github.io/personal_portfolio/
+WEBSITE: https://zhizheng28.github.io/web/
