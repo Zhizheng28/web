@@ -5,40 +5,40 @@
 /* Large Screens - 1200px and up */
 @media screen and (min-width: 1200px) {
     section {
-        margin: 0 15rem;
+        margin: 0 15rem; /* large horizontal margins */
     }
 
     .section__pic-container {
         width: 450px;
-        height: 450px;
+        height: 450px; /* large image size */
     }
 }
 
 /* Medium Screens - 768px to 1199px */
 @media screen and (max-width: 1199px) {
     section {
-        margin: 0 5rem;
+        margin: 0 5rem; /* medium horizontal margins */
     }
 
     .nav-links {
-        font-size: 1.3rem;
+        font-size: 1.3rem; /* slightly smaller nav links */
     }
 
     .title {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* slightly smaller title */
     }
 
     .section__pic-container {
         max-width: 400px;
-        max-height: 400px;
+        max-height: 400px; /* medium image size */
     }
 }
 
 /* Tablets and below - 1024px and under */
 @media screen and (max-width: 1024px) {
     /* Navigation */
-    #desktop-nav { display: none; }
-    #hamburger-nav { display: flex; }
+    #desktop-nav { display: none; } /* hide desktop nav */
+    #hamburger-nav { display: flex; } /* show hamburger nav */
 
     /* Profile Section */
     #profile { flex-direction: column; gap: 2rem; height: auto; text-align: center; }
@@ -65,7 +65,7 @@
     .logo { font-size: 1.5rem; }
     .section__pic-container, .about-pic { width: 200px; height: 200px; object-fit: cover; }
     .btn { width: 7rem; padding: 0.8rem; font-size: 0.9rem; }
-    .btn-container { gap: 1rem; flex-wrap: wrap; }
+    .btn-container { gap: 1rem; flex-wrap: wrap; } /* buttons horizontal by default */
     .details-container { padding: 1rem; }
 
     /* Experience Section */
@@ -100,6 +100,28 @@
 
     /* Articles for smaller skills */
     .article-container { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+
+    /* Footer */
+    footer nav { display: none; } /* hide footer nav on mobile, keep copyright visible */
+
+    /* Stack buttons vertically on mobile */
+    .btn-container { flex-direction: column; align-items: center; gap: 1rem; }
+
+    /* Swap button text for mobile */
+    .desktop-text { display: none; }
+    .mobile-text { display: inline; }
+
+    /* ===== Stack contact icons and text vertically on mobile ===== */
+    .contact-info-container {
+        flex-direction: column; /* stack icons on top of text */
+        align-items: center;    /* center horizontally */
+        gap: 0.5rem;            /* spacing between icon and text */
+    }
+
+    .contact-icon,
+    .email-icon {
+        margin: 0 auto; /* center icons */
+    }
 }
 
 /* Small Mobile - 480px and under */

@@ -174,6 +174,9 @@ section {
     height: 80vh;
 }
 
+.desktop-text { display: inline; }
+.mobile-text { display: none; }
+
 .section__pic-container {
     display: flex;
     height: auto;
@@ -229,7 +232,7 @@ section {
 /* ICONS */
 .icon {
     cursor: pointer;
-    height: 2rem;
+    height: 2.5rem;
     width: auto;
     object-fit: contain;
     flex-shrink: 0;
@@ -412,14 +415,19 @@ section {
 
 .gpa br { display: block; }
 
-.key-courses {
-    margin: 0.5rem 0 0 1.5rem;
+/* Honors list under education */
+.honors {
+    margin: 0.2rem 0 0 1.5rem; /* match indentation with previous lists */
     padding: 0;
-    list-style-type: disc;
-    font-size: 0.9rem; /* smaller font */
-    color: rgb(60, 60, 60);
-    text-align: left;
+    list-style-type: disc; /* standard bullet */
+    font-size: 0.9rem; /* match previous text */
+    color: rgb(60, 60, 60); /* match previous text color */
 }
+
+.honors li {
+    margin: 0.2rem 0; /* spacing between items */
+}
+
 
 /* Experience Section */
 #experience {
@@ -570,8 +578,6 @@ article div p {
     color: rgb(85, 85, 85);
 }
 
-
-
 /* Projects Section */
 #projects {
     position: relative;
@@ -584,11 +590,11 @@ article div p {
     justify-content: center;
 }
 
+/* Grid layout for 4 projects (2x2 on desktop) */
 .project-containers {
-    display: flex;
-    flex-wrap: wrap; /* allows wrapping on smaller screens */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for desktop */
     gap: 2rem;
-    justify-content: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -596,14 +602,13 @@ article div p {
 
 /* Individual project card */
 .project-card {
-    flex: 1 1 30%; /* flexible width, 3 in a row */
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 2rem;
     border: 0.1rem solid rgb(200, 200, 200);
     padding: 1rem;
-    background: white; /* white background */
+    background: white;
     box-sizing: border-box;
 }
 
@@ -630,30 +635,14 @@ article div p {
     gap: 1rem;
 }
 
-/* Buttons - matches Download CV button */
+/* Buttons style */
 .btn {
     font-weight: 600;
     transition: all 0.3s ease;
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    cursor: pointer;
-}
-
-/* Download CV button style for project buttons */
-.btn-color-2 {
-    background: white; /* white background */
-    color: black;
-    border: 0.1rem solid rgb(53, 53, 53);
-}
-
-.btn-color-2:hover {
-    background: rgb(53, 53, 53); /* dark hover background */
-    color: white;
-    border: 0.1rem solid rgb(53, 53, 53);
+    white-space: now
 }
 
 
@@ -686,7 +675,6 @@ article div p {
     border-radius: 1rem; /* slightly rounded corners */
     display: block;
 }
-
 /* Contact */
 
 #contact {
