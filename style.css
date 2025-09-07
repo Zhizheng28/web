@@ -328,12 +328,6 @@ section {
     height: 80%;
 }
 
-.arrow {
-    position: absolute;
-    right: -5rem;
-    bottom: 2.5rem;
-}
-
 /* Education Section */
 #education {
     position: relative;
@@ -578,7 +572,7 @@ article div p {
     color: rgb(85, 85, 85);
 }
 
-/* Projects Section */
+//* Projects Section */
 #projects {
     position: relative;
     padding: 2rem 0;
@@ -590,7 +584,7 @@ article div p {
     justify-content: center;
 }
 
-/* Grid layout for 4 projects (2x2 on desktop) */
+/* Grid layout for projects (2x2 on desktop) */
 .project-containers {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columns for desktop */
@@ -642,11 +636,11 @@ article div p {
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
-    white-space: now
+    white-space: nowrap; /* fixed typo */
 }
 
 
-
+/* Interests */
 #interests {
     position: relative;
     padding: 2rem 0;
