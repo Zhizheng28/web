@@ -309,6 +309,7 @@ section {
   margin-top: 2rem;
   margin-bottom: 2rem;
   flex-wrap: wrap; /* responsive layout */
+  flex-direction: row-reverse; /* CHANGE HERE: moves picture to the right */
 }
 
 .about-details-container {
@@ -508,9 +509,9 @@ section {
 
 /* Skill Category Container */
 .skills-container {
-  border: 2px solid rgb(200, 200, 200); /* round border */
+  border: 2px solid rgb(200, 200, 200); /* rounded border */
   border-radius: 1.5rem;
-  padding: 1rem 1.5rem; /* consistent spacing */
+  padding: 1rem 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -541,27 +542,24 @@ section {
 }
 
 /* Container for individual skills inside each category */
-/* Skills inside category */
 .article-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: flex-start; /* left-aligned */
-  align-items: flex-start; /* align items to top so all lines start evenly */
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* fixed columns */
+  gap: 0.5rem 1rem; /* vertical and horizontal gap */
 }
 
 /* Individual Skill Entry */
 article {
   display: flex;
-  align-items: center;
+  align-items: center; /* keep icon aligned with text */
   gap: 0.5rem;
-  width: auto; /* auto width for responsiveness */
 }
 
 article .icon {
   width: 1.5rem;
   height: 1.5rem;
   flex-shrink: 0;
+  margin-top: 0.15rem; /* optional fine-tune */
 }
 
 article div h3 {
@@ -575,7 +573,7 @@ article div p {
   color: rgb(85, 85, 85);
 }
 
-//* Projects Section */
+/* Projects Section */
 #projects {
   position: relative;
   padding: 2rem 0;

@@ -82,12 +82,17 @@
   }
 
   /* Skills Articles */
-  .article-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 2rem;
-    justify-items: center;
-  }
+.skills-about-containers {
+  grid-template-columns: 1fr; /* stack categories vertically */
+  gap: 1.5rem;
+}
+
+.article-container {
+  display: grid;
+  grid-template-columns: 1fr; /* stack items vertically for mobile */
+  gap: 1rem 0.5rem; /* vertical and horizontal gap */
+  justify-items: start; /* align checkmarks properly */
+}
 
   /* Projects */
   .project-card {
