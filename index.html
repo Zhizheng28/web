@@ -55,7 +55,7 @@
     <!-- Profile Section -->
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic-zz.png" alt="Profile" />
+        <img src="./assets/profile-pic-zz.jpg" alt="Profile" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
@@ -108,7 +108,7 @@
           >
             <img
               src="./assets/instagram.png"
-              alt="My Github Profile"
+              alt="My Instagram Profile"
               class="icon"
             />
           </a>
@@ -120,10 +120,10 @@
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
-      <div class="section-container">
+      <div class="section-container reveal">
         <div class="section__pic-container">
           <img
-            src="./assets/about-pic1.png"
+            src="./assets/about-pic1.jpg"
             alt="Profile picture"
             class="about-pic"
           />
@@ -146,7 +146,7 @@
       <p class="section__text__p1">Learn About My</p>
       <h1 class="title">Education</h1>
       <div class="education-container">
-        <div class="education-entry">
+        <div class="education-entry reveal">
           <div class="school-logo">
             <img
               src="./assets/umich-logo.png"
@@ -164,7 +164,7 @@
             <p class="gpa">GPA: 4.00/4.00</p>
           </div>
         </div>
-        <div class="education-entry">
+        <div class="education-entry reveal">
           <div class="school-logo">
             <img src="./assets/uga-logo.png" alt="University of Georgia Logo" />
           </div>
@@ -202,90 +202,8 @@
       <p class="section__text__p1">Journey Through My</p>
       <h1 class="title">Experience</h1>
 
-      <div class="experience-containers">
-
-        <!-- Michigan Center for Youth Justice -->
-        <div class="experience-card">
-          <img src="./assets/data-engineer.png" alt="Experience icon" class="icon" />
-          <div class="experience-content">
-            <h3>Michigan Center for Youth Justice (MCYJ)</h3>
-            <span>Data Analyst | September 2025 - Present | Ann Arbor, MI</span>
-            <ul>
-              <li>Developed NLP-based parsing pipelines to extract structured features from juvenile justice case reports.</li>
-              <li>Processed and cleaned longitudinal and text-based juvenile justice data for analysis.</li>
-              <li>Analyzed patterns in incidents and case outcomes to identify key trends over time.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- PRISM -->
-        <div class="experience-card">
-          <img src="./assets/manufacture.png" alt="Experience icon" class="icon" />
-          <div class="experience-content">
-            <h3>Process Reasoning & Interpretable System for Manufacturing (PRISM)</h3>
-            <span>Graduate Student Researcher (Data Scientist) | January 2026 - Present | Ann Arbor, MI</span>
-            <ul>
-              <li>Develop interpretable neural network surrogate models for manufacturing systems using real-world data.</li>
-              <li>Perform data preprocessing, exploratory analysis, and feature engineering to support AI modeling.</li>
-              <li>Collaborate with the team to validate model behavior and interpret results.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- THINC -->
-        <div class="experience-card">
-          <img src="./assets/research.png" alt="Experience icon" class="icon" />
-          <div class="experience-content">
-            <h3>Intelligent Thought and Action Lab (THINC)</h3>
-            <span>Undergraduate Student Researcher | February 2024 - September 2024 | Athens, GA</span>
-            <ul>
-              <li>Curated a 6,000+ image dataset, enabling a YOLO model to achieve 99% object detection accuracy.</li>
-              <li>Automated data workflows with 10+ Python scripts for camera calibration and data extraction.</li>
-              <li>Integrated and fine-tuned YOLOv8 into the PrecisionSort software to drive continuous performance gains.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- OSSA -->
-        <div class="experience-card">
-          <img src="./assets/teach.png" alt="Experience icon" class="icon" />
-          <div class="experience-content">
-            <h3>Office for Student Success and Achievement (OSSA)</h3>
-            <span>Peer Tutor (Statistics / Computer Science / Mathematics) | January 2024 - May 2025 | Athens, GA</span>
-            <ul>
-              <li>Provided constructive feedback and guided problem-solving in one-on-one and group Study Pod sessions.</li>
-              <li>Mentored over 50 students in academic strategies, improving critical thinking and analytical skills.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Data Science & AI Camp -->
-        <div class="experience-card">
-          <img src="./assets/datasci.png" alt="Experience icon" class="icon" />
-          <div class="experience-content">
-            <h3>Data Science & Artificial Intelligence Camp (Statistics Department)</h3>
-            <span>Student Assistant | July 2024 | Athens, GA</span>
-            <ul>
-              <li>Guided 30 students through hands-on data science and coding activities, providing troubleshooting and mentorship.</li>
-              <li>Assisted instructors with classroom management and fostered collaboration.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- U.S. Kids Golf -->
-        <div class="experience-card">
-          <img src="./assets/golf.png" alt="Experience icon" class="icon" />
-          <div class="experience-content">
-            <h3>U.S. Kids Golf</h3>
-            <span>Volunteer | May 2021 - July 2025 | Little Rock, AR</span>
-            <ul>
-              <li>Streamlined tournaments for 80+ players by managing registration, awards, and score tracking.</li>
-              <li>Coordinated daily logistics to support staff and enhance the experience for attendees.</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
+      <!-- Populated from experienceData in script.js -->
+      <div class="experience-containers" id="experience-list"></div>
     </section>
 
 
@@ -295,68 +213,8 @@
       <h1 class="title">Skills</h1>
 
       <div class="skills-details-container">
-        <div class="skills-about-containers">
-          
-          <!-- Programming Languages -->
-          <div class="skills-container">
-            <h2>Programming</h2>
-            <div class="article-container">
-              <article>
-                <img src="./assets/checkmark.png" class="icon" alt="" />
-                <div><h3>Python</h3><p>4 yrs</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" class="icon" alt="" />
-                <div><h3>R</h3><p>4 yrs</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" class="icon" alt="" />
-                <div><h3>SQL</h3><p>3 yrs</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" class="icon" alt="" />
-                <div><h3>Java</h3><p>4 yrs</p></div>
-              </article>
-            </div>
-          </div>
-
-          <!-- Tools & Libraries -->
-          <div class="skills-container">
-            <h2>Tools & Libraries</h2>
-            <div class="article-container">
-              <article><img src="./assets/checkmark.png" class="icon" alt="" /><div><h3>NumPy</h3></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" alt="" /><div><h3>Pandas</h3></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" alt="" /><div><h3>TensorFlow</h3></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" alt="" /><div><h3>PyTorch</h3></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" alt="" /><div><h3>Git/GitHub</h3></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" alt="" /><div><h3>Excel & Power BI</h3></div></article>
-            </div>
-          </div>
-
-          <!-- Data Science & ML -->
-          <div class="skills-container">
-            <h2>Data Science & ML</h2>
-            <div class="article-container">
-              <article><img src="./assets/checkmark.png" class="icon" alt="" /><div><h3>Machine Learning</h3></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" alt="" /><div><h3>Deep Learning</h3></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" alt="" /><div><h3>Computer Vision</h3></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" alt="" /><div><h3>Data Visualization</h3></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" alt="" /><div><h3>Predictive Modeling</h3></div></article>
-            </div>
-          </div>
-
-          <!-- Relevant Coursework (optional, condensed) -->
-          <div class="skills-container">
-            <h2>Relevant Coursework</h2>
-            <div class="article-container">
-              <article><img src="./assets/checkmark.png" class="icon" alt="" /><div><h3>Data Science I & II</h3></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" alt="" /><div><h3>Data Mining</h3></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" alt="" /><div><h3>Statistical Inference & Regression</h3></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" alt="" /><div><h3>Artificial Intelligence & NLP</h3></div></article>
-            </div>
-          </div>
-
-        </div>
+        <!-- Populated from skillsData in script.js -->
+        <div class="skills-about-containers" id="skills-list"></div>
       </div>
     </section>
 
@@ -370,108 +228,8 @@
       <h1 class="title">Projects</h1>
 
       <div class="project-details-container">
-        <div class="project-containers">
-          <!-- Project 1 -->
-          <div class="project-card">
-            <img
-              src="./assets/project-1.png"
-              alt="Addressing Data Imbalance Project"
-              class="project-img"
-            />
-            <h2 class="project-title">
-              Addressing Data Imbalance: Upsampling vs. Downsampling on Sport
-              Images
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2"
-                onclick="window.open('https://www.github.com')"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2"
-                onclick="window.open('https://www.youtube.com')"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-          <!-- Project 2 -->
-          <div class="project-card">
-            <img
-              src="./assets/project-2.png"
-              alt="Urban Heat Island Prediction Project"
-              class="project-img"
-            />
-            <h2 class="project-title">
-              Urban Heat Island (UHI) Prediction Project
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2"
-                onclick="window.open('https://www.github.com')"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2"
-                onclick="window.open('https://www.youtube.com')"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="project-card">
-            <img
-              src="./assets/project-3.png"
-              alt="Stock Market Time Series Forecasting Project"
-              class="project-img"
-            />
-            <h2 class="project-title">Stock Market Time Series Forecasting</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2"
-                onclick="window.open('https://www.github.com')"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2"
-                onclick="window.open('https://www.youtube.com')"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-          <!-- Project 4 -->
-          <div class="project-card">
-            <img
-              src="./assets/project-4.png"
-              alt="F-1 Racing Project"
-              class="project-img"
-            />
-            <h2 class="project-title">F-1 Racing</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2"
-                onclick="window.open('https://www.github.com')"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2"
-                onclick="window.open('https://www.youtube.com')"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
+        <!-- Populated from projectsData in script.js -->
+        <div class="project-containers" id="project-list"></div>
       </div>
     </section>
 
@@ -480,55 +238,15 @@
       <p class="section__text__p1">Dive Into My</p>
       <h1 class="title">Interests</h1>
 
-      <div class="interests-container">
-        <img
-          src="./assets/zz_interest1.png"
-          alt="Interest 1"
-          class="interest-img"
-        />
-        <img
-          src="./assets/zz_interest2.png"
-          alt="Interest 2"
-          class="interest-img"
-        />
-        <img
-          src="./assets/zz_interest3.png"
-          alt="Interest 3"
-          class="interest-img"
-        />
-        <img
-          src="./assets/zz_interest4.png"
-          alt="Interest 4"
-          class="interest-img"
-        />
-        <img
-          src="./assets/zz_interest5.png"
-          alt="Interest 5"
-          class="interest-img"
-        />
-        <img
-          src="./assets/zz_interest6.png"
-          alt="Interest 6"
-          class="interest-img"
-        />
-        <img
-          src="./assets/zz_interest7.png"
-          alt="Interest 7"
-          class="interest-img"
-        />
-        <img
-          src="./assets/zz_interest8.png"
-          alt="Interest 8"
-          class="interest-img"
-        />
-      </div>
+      <!-- Populated from interestsData in script.js -->
+      <div class="interests-container" id="interests-list"></div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
+      <div class="contact-info-upper-container reveal">
         <div class="contact-info-container">
           <img
             src="./assets/email.png"
